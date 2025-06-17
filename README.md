@@ -1,23 +1,26 @@
-# Russia-Ukraine-War
-Data Pipeline from Kobo toolbox to PostgreSQL using Python.
 
+# Russia-Ukraine-War  
+Data Pipeline from KoboToolbox to PostgreSQL using Python.
+
+---
 
 # 🛰️ Russia-Ukraine War: Data Pipeline Project
 
-This project demonstrates a complete **ETL (Extract, Transform, Load)** pipeline built using **KoboToolbox**, **Python**, and **PostgreSQL**, using **Power BI**. It fetches near real-time data about the Russia-Ukraine war, cleans and transforms it using Python, and loads it into a PostgreSQL database for further analysis or dashboarding.
+This project demonstrates a complete **ETL (Extract, Transform, Load)** pipeline built using **KoboToolbox**, **Python**, and **PostgreSQL**, visualized using **Power BI**. It fetches near real-time data about the Russia-Ukraine war, cleans and transforms it using Python, and loads it into a PostgreSQL database for further analysis or dashboarding.
 
+---
 
 ## 📌 Project Overview
 
 This pipeline performs the following steps:
 
-1. **Extract**: Downloads data from a KoboToolbox CSV export link using authentication.
+1. **Extract**: Downloads data from a KoboToolbox CSV export link using authentication.  
 2. **Transform**: Cleans and prepares the data using `pandas`:
-   - Standardizes column names
-   - Parses and coerces date formats
-   - Calculates derived metrics like total soldier casualties
-3. **Load**: Pushes the transformed data into a PostgreSQL table under a custom schema.
-4. **Visualize**:  Connect to **Power BI** for interactive dashboards and analytics.
+   - Standardizes column names  
+   - Parses and coerces date formats  
+   - Calculates derived metrics like total soldier casualties  
+3. **Load**: Pushes the transformed data into a PostgreSQL table under a custom schema.  
+4. **Visualize**: Connect to **Power BI** for interactive dashboards and analytics.
 
 ---
 
@@ -36,13 +39,13 @@ Russia-Ukraine-Conflict/
 
 ## ⚙️ Technologies Used
 
-- **Python 3.10+**
-- **Pandas** – Data manipulation and transformation
-- **Requests** – HTTP requests to KoboToolbox
-- **psycopg2** – PostgreSQL database connection
-- **PostgreSQL** – Target relational database
-- **KoboToolbox** – Humanitarian data collection platform
-- **dotenv** – Environment variable management
+- **Python 3.10+**  
+- **Pandas** – Data manipulation and transformation  
+- **Requests** – HTTP requests to KoboToolbox  
+- **psycopg2** – PostgreSQL database connection  
+- **PostgreSQL** – Target relational database  
+- **KoboToolbox** – Humanitarian data collection platform  
+- **dotenv** – Environment variable management  
 
 ---
 
@@ -82,14 +85,14 @@ python pipeline.py
 
 ## 🧠 Key Transformations
 
-- **Date** field is parsed and converted for time-based filtering.
+- **Date** field is parsed and converted for time-based filtering.  
 - **Total_Soldier_Casualties** is computed as:
 
-  ```
+  ```python
   Casualties + Injured + Captured
   ```
 
-- Column names are standardized (underscored, lowercase).
+- Column names are standardized (underscored, lowercase).  
 - Null or malformed values are handled gracefully.
 
 ---
@@ -124,12 +127,17 @@ python pipeline.py
 
 Connected the PostgreSQL table to **Power BI** to create visuals such as:
 
-- Trends in total casualties over time
-- Casualty breakdown by oblast (region)
-- Combat intensity heatmaps
-- Occupied territory analysis
+- Trends in total casualties over time  
+- Casualty breakdown by oblast (region)  
+- Combat intensity heatmaps  
+- Occupied territory analysis  
+
+### 📷 Dashboard Screenshot
+
+![Russia-Ukraine War Dashboard](./image.png)
 
 
+---
 
 ## 📫 Contact
 
@@ -138,4 +146,3 @@ For any questions, feedback, or collaboration inquiries, feel free to reach out:
 - 📧 Email: korosbrian574@gmail.com  
 - 📞 Phone: +254 768 518 488  
 - 💼 LinkedIn: [Brian Kimutai](https://www.linkedin.com/in/brian-kimutai-0888352b6/)
-
